@@ -1,0 +1,27 @@
+form.sbar {
+    box-sizing: border-box;
+}
+
+form.sbar input[type=text] {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid grey;
+    float: left;
+    width: 91%;
+    background: black;
+    color: white;
+  }
+  
+  form.sbar button:hover {
+    background: #0b7dda;
+  } */
+  
+  form.sbar::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .cartbar {
+    display: flex;
+    align-content: flex-end;
+  }

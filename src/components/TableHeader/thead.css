@@ -1,0 +1,12 @@
+thead {
+    text-align: center;
+    background-color:forestgreen;
+    color: white;
+    padding: 20px;
+    border-bottom: solid;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+
+}
