@@ -21,7 +21,7 @@ export default function Cart() {
           <div className="cart carthead">Empty Country</div>
         ) : (
           <div className="cart carthead">
-            You have{incart.length} in Cart {''}{' '}
+            You have{incart.length} in Cart {''}
           </div>
         )}
       </div>
@@ -35,6 +35,8 @@ export default function Cart() {
                 </div>
                 <div>
                   <div>{country.name} </div>
+                  <div>{country.region} </div>
+                  <div>{country.population} </div>
                   <Button onClick={() => dispatch(RemoveRestCountry(country))}>
                     Remove{' '}
                   </Button>

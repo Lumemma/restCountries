@@ -33,7 +33,6 @@ export default function RestCountryDetails() {
         .map((countryData) => {
           return (
             <ul key={countryData.name}>
-              ()
               <li>{countryData.name}</li>
               <li>{countryData.population}</li>
               <li>{countryData.region}</li>

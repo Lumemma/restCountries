@@ -18,7 +18,6 @@ export default function Home() {
   return (
     <>
       <SearchBar keyword={keyword} handleChange={handleChange} />
-
       <MainTable restcountries={restcountries} />
       <footer>All reserved rights</footer>
     </>

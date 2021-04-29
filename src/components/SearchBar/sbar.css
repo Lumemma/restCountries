@@ -1,5 +1,7 @@
 form.sbar {
     box-sizing: border-box;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 form.sbar input[type=text] {
