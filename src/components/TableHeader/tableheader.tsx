@@ -1,5 +1,5 @@
 import React from 'react'
-import './thead.css'
+//import './thead.css'
 
 export default function TableHeader() {
   return (

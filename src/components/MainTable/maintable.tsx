@@ -1,11 +1,12 @@
-import React from 'react'
+import Table from '@material-ui/core/Table'
 
-import Table from 'react-bootstrap/Table'
+import React from 'react'
+//import Table from 'react-bootstrap/Table'
 import { Restcountry } from '../../types'
 
 import TableHeader from '../TableHeader/tableheader'
 import TableRow from '../TableRow/tablerow'
-import './maintable.css'
+//import './maintable.css'
 
 type mainTableProps = {
   restcountries: Restcountry[]

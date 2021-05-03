@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { AddRestCountry } from '../../redux/actions/restcountry'
 import { Restcountry } from '../../types'
 import Flag from '../Flag/flag'
-import './tr.css'
+//import './tr.css'
 import Button from '@material-ui/core/Button'
 
 type TableRowProps = {

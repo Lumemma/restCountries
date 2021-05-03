@@ -1,5 +1,5 @@
 import React from 'react'
-import './flag.css'
+//import './flag.css'
 
 export type flagProps = {
   flagUrl: string
