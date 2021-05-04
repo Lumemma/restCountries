@@ -1,12 +1,10 @@
-import Table from '@material-ui/core/Table'
-
+import { Table, TableContainer } from '@material-ui/core'
 import React from 'react'
 //import Table from 'react-bootstrap/Table'
 import { Restcountry } from '../../types'
-
 import TableHeader from '../TableHeader/tableheader'
 import TableRow from '../TableRow/tablerow'
-//import './maintable.css'
+import './maintable.css'
 
 type mainTableProps = {
   restcountries: Restcountry[]
@@ -15,13 +13,15 @@ type mainTableProps = {
 //the best approach to pass data to the tablerow is to map through restcountries and get access to the data we need for each restcountry.
 export default function MainTable({ restcountries }: mainTableProps) {
   return (
-    <Table>
-      <TableHeader />
-      <tbody>
-        {restcountries.map((restcountry) => (
-          <TableRow key={restcountry.name} restcountry={restcountry} />
-        ))}
-      </tbody>
-    </Table>
+    <TableContainer>
+      <Table>
+        <TableHeader />
+        <tbody>
+          {restcountries.map((restcountry) => (
+            <TableRow key={restcountry.name} restcountry={restcountry} />
+          ))}
+        </tbody>
+      </Table>
+    </TableContainer>
   )
 }

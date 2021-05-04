@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import Cart from '../Cart/Cart'
-//import './sbar.css'
+import './sbar.css'
 import Drawer from '@material-ui/core/Drawer'
 import Button from '@material-ui/core/Button'
 import Badge from '@material-ui/core/Badge'

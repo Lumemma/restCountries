@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { AddRestCountry } from '../../redux/actions/restcountry'
 import { Restcountry } from '../../types'
 import Flag from '../Flag/flag'
-//import './tr.css'
+import './tr.css'
 import Button from '@material-ui/core/Button'
 
 type TableRowProps = {
@@ -29,8 +29,12 @@ export default function TableRow({ restcountry }: TableRowProps) {
       <td>{restcountry.region}</td>
 
       <td>
-        <Button onClick={() => dispatch(AddRestCountry(restcountry))}>
-          Add{' '}
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => dispatch(AddRestCountry(restcountry))}
+        >
+          Add
         </Button>
       </td>
     </tr>

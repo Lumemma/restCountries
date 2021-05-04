@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { MuiThemeProvider } from '@material-ui/core'
 import { getThemeByName } from '../Themes/themeNames'
+import { CssBaseline, MuiThemeProvider } from '@material-ui/core'
 
 export const ThemeContext = React.createContext((themeName: string): void => {})
 
@@ -13,7 +13,10 @@ const ThemeProvider: React.FC = (props) => {
 
   return (
     <ThemeContext.Provider value={_setThemeName}>
-      <MuiThemeProvider theme={theme}>{props.children}</MuiThemeProvider>
+      <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {props.children}
+      </MuiThemeProvider>
     </ThemeContext.Provider>
   )
 }

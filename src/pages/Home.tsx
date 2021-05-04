@@ -38,6 +38,13 @@ export default function Home() {
         >
           Set Dark Theme
         </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => setThemeName('brownTheme')}
+        >
+          Set brown Theme
+        </Button>
       </div>
       <SearchBar keyword={keyword} handleChange={handleChange} />
       <MainTable restcountries={restcountries} />
