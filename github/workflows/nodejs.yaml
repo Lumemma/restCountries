@@ -1,0 +1,31 @@
+name: CI/CD
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+        -name: Checkout our code
+         uses: actions/checkout@v2
+        -name: Use nodejs
+         uses: actions/setup-node@v1
+         with:
+           node-version: 12.x
+        -name: Get yarn cache dir
+         id: yarn cache-dir
+         run: echo "::set-out name=dir::$(yarncache dir"
+        -name: Setup cache
+         uses: actions/cache@v1
+         with:
+           path: ${{ steps.yarn-cache-dir.outputs.dir }}
+           key: ${{ runner.os }}-modules-${{ hashfiles('**/yarn.lock') }}
+        -name: Install dependencies
+         run: yarn install --frozen-lockfile
+        -name: Build the project 
+         run: yarn build
+        -name: Deploy to netlify
+         uses: netlify/actions/cli@master
+         env:
+           
+
