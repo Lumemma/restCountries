@@ -6,4 +6,6 @@ function* doSomethingWhenAddingProduct(action: AddProductAction) {
   yield console.log(action)
 }
 
-export default [takeLatest(ADD_PRODUCT, doSomethingWhenAddingProduct)]
+const addProductSaga = [takeLatest(ADD_PRODUCT, doSomethingWhenAddingProduct)]
+
+export default addProductSaga
